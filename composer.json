@@ -1,0 +1,12 @@
+{
+    "name": "yoeunes/notify-toastr",
+    "license": "MIT",
+    "require": {
+        "yoeunes/notify": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yoeunes\\Notify\\Toastr\\": "src"
+        }
+    }
+}
