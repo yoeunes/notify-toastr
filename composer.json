@@ -2,7 +2,7 @@
     "name": "yoeunes/notify-toastr",
     "license": "MIT",
     "require": {
-        "yoeunes/notify": "@dev"
+        "yoeunes/notify": "v2.x-dev"
     },
     "autoload": {
         "psr-4": {
