@@ -37,7 +37,7 @@ toastr.success(\'success message\', \'success title\', []);
     {
         $factory = new ToastrFactory();
         $factory->notification('success', 'success message', 'success title', array('options' => array(
-            'display' => 'top-right'
+            'display' => 'top-right',
         )));
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -55,8 +55,8 @@ toastr.success(\'success message\', \'success title\', {"display":"top-right"});
             'scripts' => array('jquery.js', 'notifier.js'),
             'styles' => array('notifier.css'),
             'options' => array(
-                'display' => 'top-left'
-            )
+                'display' => 'top-left',
+            ),
         ));
         $this->assertEquals('<script type="application/javascript">
 toastr.options = {"display":"top-left"};

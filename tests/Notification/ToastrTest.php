@@ -22,8 +22,8 @@ class ToastrTest extends TestCase
     {
         $context = array(
             'options' => array(
-                'display' => 'top-right'
-            )
+                'display' => 'top-right',
+            ),
         );
         $toastr = new Toastr('success', 'success message', 'success title', $context);
 

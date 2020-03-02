@@ -49,7 +49,7 @@ final class ToastrFactory extends AbstractNotificationFactory implements Styleab
         $html = '';
 
         foreach ($this->getNotifications() as $notification) {
-            $html .= $notification->render() . PHP_EOL;
+            $html .= $notification->render().PHP_EOL;
         }
 
         return $html;
