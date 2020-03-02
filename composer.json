@@ -1,12 +1,53 @@
 {
     "name": "yoeunes/notify-toastr",
+    "description": "PHP toastr adapter for yoeunes/notify",
+    "keywords": [
+        "yoeunes",
+        "notify",
+        "php",
+        "laravel",
+        "symfony",
+        "Lumen",
+        "notifications",
+        "messages",
+        "alerts",
+        "pnotify",
+        "toastr "
+    ],
+    "homepage": "https://github.com/yoeunes/notify-toastr",
+    "authors": [
+        {
+            "name": "Younes Khoubza",
+            "email": "younes.khoubza@gmail.com",
+            "homepage": "https://github.com/yoeunes",
+            "role": "Developer"
+        }
+    ],
     "license": "MIT",
     "require": {
+        "php": ">=5.3",
+        "ext-json": "*",
         "yoeunes/notify": "v2.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
     },
     "autoload": {
         "psr-4": {
             "Yoeunes\\Notify\\Toastr\\": "src"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yoeunes\\Notify\\Toastr\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "platform": {
+            "php": "5.3.9"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

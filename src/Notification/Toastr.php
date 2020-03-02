@@ -1,20 +1,18 @@
 <?php
 
-namespace Yoeunes\Notify\Toastr\Notifiers;
+namespace Yoeunes\Notify\Toastr\Notification;
 
-use Yoeunes\Notify\Notifiers\BaseNotification;
+use Yoeunes\Notify\Notification\AbstractNotification;
 
-class Toastr extends BaseNotification
+final class Toastr extends AbstractNotification
 {
-    public function getNotifier()
-    {
-        return 'toastr';
-    }
-
+    /**
+     * {@inheritdoc}
+     */
     public function render()
     {
         $context = $this->getContext();
-        $options = isset($context['options']) ? $context['options'] : [];
+        $options = isset($context['options']) ? $context['options'] : array();
 
         return sprintf("toastr.%s('%s', '%s', %s);",
             $this->getType(),
