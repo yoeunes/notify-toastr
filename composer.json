@@ -30,7 +30,7 @@
         "yoeunes/notify": "v2.x-dev"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "4.8.36"
     },
     "autoload": {
         "psr-4": {
