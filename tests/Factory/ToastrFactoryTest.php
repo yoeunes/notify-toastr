@@ -3,13 +3,13 @@
 namespace Yoeunes\Notify\Toastr\Tests\Factory;
 
 use PHPUnit\Framework\TestCase;
-use Yoeunes\Notify\Toastr\Factory\ToastrFactory;
+use Yoeunes\Notify\Toastr\Producer\ToastrProducer;
 
 class ToastrFactoryTest extends TestCase
 {
     public function test_simple_toastr_factory()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
 
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -22,7 +22,7 @@ toastr.options = [];
 
     public function test_toastr_factory_with_one_notification()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->notification('success', 'success message', 'success title');
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -35,7 +35,7 @@ toastr.success(\'success message\', \'success title\', []);
 
     public function test_toastr_factory_with_one_notification_and_context()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->notification('success', 'success message', 'success title', array('options' => array(
             'display' => 'top-right',
         )));
@@ -50,7 +50,7 @@ toastr.success(\'success message\', \'success title\', {"display":"top-right"});
 
     public function test_toastr_with_config()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->setConfig(array(
             'scripts' => array('jquery.js', 'notifier.js'),
             'styles' => array('notifier.css'),
@@ -69,7 +69,7 @@ toastr.options = {"display":"top-left"};
 
     public function test_success_notification()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->success('message', 'title');
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -82,7 +82,7 @@ toastr.success(\'message\', \'title\', []);
 
     public function test_info_notification()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->info('message', 'title');
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -95,7 +95,7 @@ toastr.info(\'message\', \'title\', []);
 
     public function test_error_notification()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->error('message', 'title');
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];
@@ -108,7 +108,7 @@ toastr.error(\'message\', \'title\', []);
 
     public function test_warning_notification()
     {
-        $factory = new ToastrFactory();
+        $factory = new ToastrProducer();
         $factory->warning('message', 'title');
         $this->assertEquals('<script type="application/javascript">
 toastr.options = [];

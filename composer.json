@@ -27,7 +27,7 @@
     "require": {
         "php": ">=5.3",
         "ext-json": "*",
-        "yoeunes/notify": "v2.x-dev"
+        "yoeunes/notify": "dev-stamps"
     },
     "require-dev": {
         "phpunit/phpunit": "4.8.36"
